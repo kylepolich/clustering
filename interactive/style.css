@@ -1,0 +1,95 @@
+body {
+	margin: 0px;
+	height: 100%;
+}
+
+#menu {
+	height: 20px;
+}
+
+#main {
+	padding-bottom: 1px;
+}
+
+#silhouette-svg {
+	width: 600;
+	height: 500;
+}
+
+#mysvg {
+	width: 600;
+	height: 500;
+}
+
+#silhouette-container {
+	display: inline-block;
+}
+
+#left {
+	float: left;
+}
+#algo-selector {
+	float: left;
+}
+#silhouette {
+
+}
+
+.btnAlgo {
+	width: 70;
+}
+
+.param {
+	width:50px;
+}
+
+
+.magnet {
+	opacity: 0.2;
+	r: 20;
+	fill: #f00;
+}
+
+.cluster-connect {
+	stroke: #f00;
+	stroke-width: 1;
+	opacity: 0.2;
+}
+
+
+
+.chart {
+  background: #b0e0f8;
+  margin: 5px;
+}
+
+.chart rect {
+  stroke: white;
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+}
+
+.chart text.name {
+  fill: #000;
+}
+
+.chart line {
+  stroke: #c1c1c1;
+}
+
+.chart .rule {
+  fill: #000;
+}
+
+/* removed the while stroke as we don't need it anymore */
+#step-5 .chart rect {
+  stroke: none;
+}
+
+/* a bit of hovering effect for each bar */
+#step-5 .chart rect:hover {
+  fill: #64707D;
+}

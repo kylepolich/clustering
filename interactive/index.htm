@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="jquery-ui.css">
+		<script type="text/javascript" src="common.js"></script>
+		<script src="d3.v3.min.js" charset="utf-8"></script>
+		<script src="algo/dbscan.js" charset="utf-8"></script>
+		<script src="algo/kmeans.js" charset="utf-8"></script>
+		<script src="viz/silhouette.js" charset="utf-8"></script>
+		<script src="colorbrewer.js" charset="utf-8"></script>
+	</head>
+<body>
+	<div id='menu'>
+		<button class="btn" id="btnAddPoints">Add Points</button>
+		<button class="btn" id="btnClear">Clear</button>
+		<button class="btn" id="btnMagnetize">Magnetize</button>
+		<button class="btn" id="btnRandomize">Randomize</button>
+	</div>
+	<div id='main'>
+		<div id='left'>
+			<svg id='mysvg'>
+			</svg>
+		</div>
+		<div id='algo-selector'>
+			<input type='radio' class='algoradio' id='ralgo-kmeans' name='ralgo' value='kmeans' checked/>k-means
+			<br/>
+			<input type='radio' class='algoradio' id='ralgo-dbscan' name='ralgo' value='dbscan' />dbscan
+			<br/><br/>
+			<div id='algo-k-means'>
+				K: <input id='k' class='param' value='5' />
+			</div>
+			<div id='algo-dbscan'>
+				DBScan:
+				<br/>
+				Min points: <input id='minPoints' class='param' value='5' />
+				<br/>
+				Epsilon: <input id='epsilon' class='param' value='50' />
+			</div>
+			<button class='btnAlgo' id='btnRunAlgo'>Run</button>
+			<br/>
+			<button class='btnAlgo' id='btnNone'>None</button>
+		</div>
+		<div id='silhouette-container'>
+			<svg id='silhouette-svg'></svg>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function() {
+		initUi()
+	})
+</script>
+</html>

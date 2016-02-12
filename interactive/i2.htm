@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="jquery-ui.css">
+		<script type="text/javascript" src="common.js"></script>
+		<script src="d3.v3.min.js" charset="utf-8"></script>
+		<script src="algo/dbscan.js" charset="utf-8"></script>
+		<script src="algo/kmeans.js" charset="utf-8"></script>
+		<script src="viz/silhouette.js" charset="utf-8"></script>
+		<script src="viz/heatmap.js" charset="utf-8"></script>
+		<script src="colorbrewer.js" charset="utf-8"></script>
+	</head>
+<body>
+	<div id='viz' class='heatmap' style='width: 900px; height: 300px; background: #fdd'></div>
+</body>
+<script>
+	$(document).ready(function() {
+		var data = [
+			[10, 4, 3, 8, 1],
+			[ 1, 2, 1, 7, 5],
+			[ 4, 8, 2, 6, 11]
+		]
+		var dataset = {
+			'rows': ['apple', 'pinapple', 'watermellon'],
+			'cols': ['asdlfkj', 'b', 'jkljc', 'd', 'e'],
+			'data': data
+		}
+		heatmap('#viz', dataset, 900, 300)
+	})
+</script>
+</html>
